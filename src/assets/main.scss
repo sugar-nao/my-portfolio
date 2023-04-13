@@ -1,0 +1,5 @@
+@use './general';
+
+body {
+  background-color: general.$base-color;
+}
