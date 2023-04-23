@@ -12,37 +12,45 @@ const isAboutHovered = ref(false)
     </RouterLink>
 
     <nav class="nav">
-      <div
-        class="linklist"
-        @mouseover="() => (isAboutHovered = true)"
-        @mouseleave="() => (isAboutHovered = false)"
-      >
-        <RouterLink
-          to="/about"
-          class="link"
-          :class="{ '-active': isAboutHovered }"
-          active-class="-active"
-          >About
-        </RouterLink>
-        <Transition name="anchor">
-          <ul v-if="isAboutHovered" class="anchorlist">
-            <li class="item">
-              <RouterLink to="/about#aboutMe" class="link anchor">About me</RouterLink>
-            </li>
-            <li class="item">
-              <RouterLink to="/about#skillSet" class="link anchor">Skill set</RouterLink>
-            </li>
-            <li class="item">
-              <RouterLink to="/about#career" class="link anchor">Career</RouterLink>
-            </li>
-            <li class="item">
-              <RouterLink to="/about#socialMedia" class="link anchor">Social<br />Media</RouterLink>
-            </li>
-          </ul>
-        </Transition>
-      </div>
-      <RouterLink to="/works" class="link" active-class="-active">Works</RouterLink>
-      <RouterLink to="/contact" class="link" active-class="-active">Contact</RouterLink>
+      <ul class="linklist">
+        <li
+          class="item -about"
+          @mouseover="() => (isAboutHovered = true)"
+          @mouseleave="() => (isAboutHovered = false)"
+        >
+          <RouterLink
+            to="/about"
+            class="link"
+            :class="{ '-active': isAboutHovered }"
+            active-class="-active"
+            >About
+          </RouterLink>
+          <Transition name="anchor">
+            <ul v-if="isAboutHovered" class="anchorlist">
+              <li class="anchoritem">
+                <RouterLink to="/about#aboutMe" class="link anchor">About me</RouterLink>
+              </li>
+              <li class="anchoritem">
+                <RouterLink to="/about#skillSet" class="link anchor">Skill set</RouterLink>
+              </li>
+              <li class="anchoritem">
+                <RouterLink to="/about#career" class="link anchor">Career</RouterLink>
+              </li>
+              <li class="anchoritem">
+                <RouterLink to="/about#socialMedia" class="link anchor"
+                  >Social<br />Media</RouterLink
+                >
+              </li>
+            </ul>
+          </Transition>
+        </li>
+        <li class="item">
+          <RouterLink to="/works" class="link" active-class="-active">Works</RouterLink>
+        </li>
+        <li class="item">
+          <RouterLink to="/contact" class="link" active-class="-active">Contact</RouterLink>
+        </li>
+      </ul>
     </nav>
   </header>
 </template>
@@ -51,11 +59,12 @@ const isAboutHovered = ref(false)
 @use '@/assets/general';
 
 .header-content {
+  z-index: 1;
   background-color: general.$accent-color;
   display: flex;
   height: 70px;
   justify-content: space-between;
-  padding: 0 15%;
+  padding: 0 4%;
 
   > .logo {
     align-self: center;
@@ -67,18 +76,26 @@ const isAboutHovered = ref(false)
     display: flex;
     justify-content: space-between;
   }
-
   > .nav > .linklist {
+    display: flex;
+    list-style-type: none;
+  }
+
+  > .nav > .linklist > .item &.-about {
     display: flex;
     flex-direction: column;
     height: fit-content;
   }
 
-  > .nav .link {
+  > .nav > .linklist > .item + .item {
+    margin-left: 2rem;
+  }
+
+  > .nav > .linklist > .item .link {
     align-items: center;
     color: general.$dark-text-color;
     display: flex;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: bold;
     height: 70px;
     justify-content: center;
@@ -93,28 +110,25 @@ const isAboutHovered = ref(false)
     }
   }
 
-  > .nav > .link {
-    margin-left: 40px;
-  }
-
-  .anchorlist {
+  > .nav > .linklist > .item > .anchorlist {
     display: flex;
     flex-direction: column;
     height: 280px;
     overflow: hidden;
+    list-style-type: none;
+
+    &.anchor-enter-active,
+    &.anchor-leave-active {
+      transition: height 0.3s;
+    }
+
+    &.anchor-enter-from,
+    &.anchor-leave-to {
+      height: 0;
+    }
   }
 
-  .anchor-enter-active,
-  .anchor-leave-active {
-    transition: height 0.3s;
-  }
-
-  .anchor-enter-from,
-  .anchor-leave-to {
-    height: 0;
-  }
-
-  > .nav > .linklist > .anchorlist > .item > .anchor {
+  > .nav > .linklist > .item > .anchorlist > .anchoritem > .anchor {
     background-color: general.$accent-color;
     color: general.$dark-text-color;
 
