@@ -2,7 +2,7 @@
   <div class="home-view">
     <p class="title">SATONAO</p>
     <p class="text">Web Frontend Engineer</p>
-    <img alt="logo" src="@/assets/logo.svg" class="image" />
+    <img alt="" src="@/assets/logo.svg" class="image" />
   </div>
 </template>
 
