@@ -20,8 +20,8 @@ import SocialMedia from './components/SocialMedia/index.vue'
 .about-view {
   margin-bottom: 2rem;
 
-  .content {
-    margin-top: 2rem;
+  > .content {
+    margin-top: 4rem;
   }
 }
 </style>
