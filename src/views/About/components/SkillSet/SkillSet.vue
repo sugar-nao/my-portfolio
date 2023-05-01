@@ -13,7 +13,7 @@ import BaseContent from '@/components/BaseContent.vue'
         </li>
         <li class="item">
           <p class="heading">Back-end</p>
-          <p class="content">Java・MySQL<br />※実務での実装経験はなし</p>
+          <p class="content">Java・MySQL</p>
         </li>
         <li class="item">
           <p class="heading">保有資格</p>

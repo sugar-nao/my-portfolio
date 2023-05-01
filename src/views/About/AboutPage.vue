@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import AboutMe from './components/AboutMe/index.vue'
-import SkillSet from './components/SkillSet/index.vue'
-import Career from './components/Career/index.vue'
-import SocialMedia from './components/SocialMedia/index.vue'
+import AboutMe from './components/AboutMe/AboutMe.vue'
+import SkillSet from './components/SkillSet/SkillSet.vue'
+import Career from './components/Career/AboutCareer.vue'
+import SocialMedia from './components/SocialMedia/SocialMedia.vue'
 </script>
 
 <template>
