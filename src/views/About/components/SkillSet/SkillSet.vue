@@ -62,6 +62,7 @@ import BaseContent from '@/components/BaseContent.vue'
   .list > .item > .content {
     margin-left: 4rem;
     flex-shrink: 1;
+    list-style-type: disc;
   }
 }
 </style>
