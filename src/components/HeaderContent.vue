@@ -14,7 +14,7 @@ const isAboutHovered = ref(false)
     <nav class="nav">
       <ul class="linklist">
         <li
-          class="item -about"
+          class="item"
           @mouseover="() => (isAboutHovered = true)"
           @mouseleave="() => (isAboutHovered = false)"
         >
@@ -62,9 +62,12 @@ const isAboutHovered = ref(false)
   z-index: 1;
   background-color: general.$accent-color;
   display: flex;
-  height: 70px;
+  height: 64px;
   justify-content: space-between;
+  opacity: 0.9;
   padding: 0 4%;
+  position: fixed;
+  width: 100%;
 
   > .logo {
     align-self: center;
@@ -81,12 +84,6 @@ const isAboutHovered = ref(false)
     list-style-type: none;
   }
 
-  > .nav > .linklist > .item &.-about {
-    display: flex;
-    flex-direction: column;
-    height: fit-content;
-  }
-
   > .nav > .linklist > .item + .item {
     margin-left: 2rem;
   }
@@ -97,7 +94,7 @@ const isAboutHovered = ref(false)
     display: flex;
     font-size: 1.1rem;
     font-weight: bold;
-    height: 70px;
+    height: 64px;
     justify-content: center;
     text-decoration: none;
     width: 100px;
