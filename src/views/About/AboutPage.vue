@@ -21,7 +21,7 @@ import SocialMedia from './components/SocialMedia/SocialMedia.vue'
   margin-bottom: 2rem;
 
   > .content {
-    margin-top: 4rem;
+    margin-top: 8rem;
   }
 }
 </style>
