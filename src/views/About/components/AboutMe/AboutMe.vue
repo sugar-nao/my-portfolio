@@ -7,7 +7,7 @@ import BaseContent from '@/components/BaseContent.vue'
     <template #title>About Me</template>
     <template #content>
       <div class="wrapper">
-        <img alt="profile" src="@/assets/logo.svg" class="image" />
+        <img alt="profile" src="@/assets/images/logo.svg" class="image" />
         <div class="content">
           <div class="description">
             こんにちは！satonaoと申します。

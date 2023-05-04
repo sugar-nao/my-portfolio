@@ -8,7 +8,7 @@ const isAboutHovered = ref(false)
 <template>
   <header class="header-content">
     <RouterLink class="logo" to="/">
-      <img alt="logo" src="@/assets/logo.svg" width="50" height="50" />
+      <img alt="logo" src="@/assets/images/logo.svg" width="50" height="50" />
     </RouterLink>
 
     <nav class="nav">
