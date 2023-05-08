@@ -6,7 +6,7 @@ import SocialMedia from './components/SocialMedia/SocialMedia.vue'
 </script>
 
 <template>
-  <div class="about-view">
+  <div class="about-page">
     <about-me id="aboutMe" class="content"></about-me>
     <skill-set id="skillSet" class="content"></skill-set>
     <career id="career" class="content"></career>
@@ -17,9 +17,7 @@ import SocialMedia from './components/SocialMedia/SocialMedia.vue'
 <style lang="scss" scoped>
 @use '@/assets/general';
 
-.about-view {
-  margin-bottom: 2rem;
-
+.about-page {
   > .content {
     margin-top: 8rem;
   }

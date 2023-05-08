@@ -1,5 +1,5 @@
 <template>
-  <div class="home-view">
+  <div class="home-page">
     <p class="title">SATONAO</p>
     <p class="text">Web Frontend Engineer</p>
     <img alt="" src="@/assets/images/logo.svg" class="image" />
@@ -9,7 +9,7 @@
 <style lang="scss" scoped>
 @use '@/assets/general';
 
-.home-view {
+.home-page {
   background-color: general.$top-color;
   display: flex;
   flex-direction: column;
