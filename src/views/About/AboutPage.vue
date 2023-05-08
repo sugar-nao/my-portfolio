@@ -20,6 +20,10 @@ import SocialMedia from './components/SocialMedia/SocialMedia.vue'
 .about-page {
   > .content {
     margin-top: 8rem;
+
+    &:last-child {
+      margin-bottom: 8rem;
+    }
   }
 }
 </style>
